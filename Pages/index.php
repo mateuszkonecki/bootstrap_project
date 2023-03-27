@@ -156,28 +156,36 @@
 </nav>
 
 <div class="mb-5">
-    <div class="conatiner m-5">
-    <div class="text-center">
-        <h4 class="display-4 mb-5">O mnie</h4>
-    </div>
-    </div>
-    <div class="container">
-    <div class="row">
-        <div class="col-12 col-md-5">
-            <div class="container border rounded p-3">
-                <img src="../Photos/na_profil.jpeg" alt="Moje zdjecie" class="img-fluid rounded">
+        <div class="conatiner m-5">
+            <div class="text-center">
+                <h4 class="display-4 mb-5">O mnie</h4>
             </div>
         </div>
-        <div class="col-12 col-md-7 mt-4 mt-md-0">
-            <div class="container">
-                <div class="lead my-2"><span class="text-warning"><b>></b></span> Uczeń Technikum Programistycznego</div>
-                <div class="lead my-2"><span class="text-warning"><b>></b></span> Uwielbiam uprawiać sport, <b class="text-warning">szczególnie siatkówkę</b></div>
-                <div class="lead my-2"><span class="text-warning"><b>></b></span> Interesuję się <b class="text-info">fotografowaniem przyrody</b> oraz ciekawych detali</span></div>
+        <div class="container mb-4">
+            <blockquote class="blockquote lead text-center">
+                <i>"Sukces polega na przechodzeniu od porażki do porażki bez utraty entuzjazmu"</i>
+                <div class="blockquote-footer lead mt-2 mt-md-1">Winston Churchill</div>
+            </blockquote>
+        </div>
+        <hr class="col-10 col-md-7">
+        <div class="container mt-4">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-5">
+                    <div class="container rounded p-3">
+                        <img src="../Photos/na_profil.jpeg" alt="Moje zdjecie" class="img img-fluid rounded">
+                    </div>
+                </div>
+                <div class="col-12 col-lg-7 mt-4 mt-md-0">
+                    <div class="container">
+                        <div class="lead my-3 my-md-5"><span class="text-warning"><b>></b></span> Uczeń Technikum Programistycznego</div>
+                        <div class="lead my-3 my-md-5"><span class="text-warning"><b>></b></span> Wiąże moją przyszłość z programowaniem mobilnym</div>
+                        <div class="lead my-3 my-md-5"><span class="text-warning"><b>></b></span> Chętnie uprawiam sport, szczególnie siatkówkę</div>
+                        <div class="lead my-3 my-md-5"><span class="text-warning"><b>></b></span> W wolnym czasie lubię tworzyć strony internetowe</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    </div>
-</div>
 
 <div id="myBlog">
     <div class="jumbotron jumbotron-fluid text-white blog text-center my-5">
@@ -240,14 +248,14 @@
                 </div>
                 <?php 
                         if(isset($_POST['submitRequest']) && empty($alerts)) {
-                            echo "
+                            echo `
                             <div class='alert alert-success' role='alert'>
                                 <b>Dziękuję za wysłanie wiadomości!</b> <br> Postaram się odpowiedzieć najszybciej, jak będzie to możliwe.
                                 <button type='button' class='close' data-dismiss='alert'>
                                     <span aria-hidden='true'>&times;</span>
                                 </button>
                             </div>
-                            ";
+                            `;
                         }
                     ?>
                 <form method="POST" autocomplete="off">

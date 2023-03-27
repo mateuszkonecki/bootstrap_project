@@ -83,7 +83,7 @@
     <?php 
         $author = $_SESSION['login'];
         $conn = mysqli_connect("localhost", "root", "", "bootsrap_page");
-        $sql = "SELECT * FROM posts WHERE author = '$author' ORDER BY published_data DESC, isEdited ASC, time DESC";
+        $sql = "SELECT * FROM posts WHERE author = '$author' ORDER BY published_date DESC, isEdited ASC, time DESC";
         $result = mysqli_query($conn, $sql);
 
         if(!$conn) {
@@ -92,7 +92,7 @@
 
         while($row = mysqli_fetch_array($result)) {
                 $titleCard = $row['title'];
-                $dateCard = $row['published_data'];
+                $dateCard = $row['published_date'];
                 $datePlusOne = $row['dataPlusTwo']; 
                 $contentCard = $row['content'];
                 $edited = $row['isEdited'];

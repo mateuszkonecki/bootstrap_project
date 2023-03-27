@@ -28,7 +28,7 @@
             if(!$conn) {
                 header('Location: page_500.php');
             }
-            $sql = "INSERT INTO posts VALUES (NULL, '$author', '$title', '$date', '$datePlusTwo', '$time', '$content', 'no')";
+            $sql = "INSERT INTO posts VALUES (NULL, '$author', '$title', '$date', '$datePlusTwo', '$content', 'no', '$time')";
             $result = mysqli_query($conn, $sql);
             header('Location: yourPosts.php');
             mysqli_close($conn);
