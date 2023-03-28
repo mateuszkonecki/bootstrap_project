@@ -48,7 +48,7 @@
             if(!$conn) {
                 header('Location: page_500.php');
             }
-            $sql2 = "UPDATE posts SET title = '$title', content = '$content', isEdited = 'yes', published_data = '$date', dataPlusTwo = '$datePlusTwo', time = '$time' WHERE id= '$id'";
+            $sql2 = "UPDATE posts SET title = '$title', content = '$content', isEdited = 'yes', published_date = '$date', dataPlusTwo = '$datePlusTwo', time = '$time' WHERE id= '$id'";
             $result2 = mysqli_query($conn, $sql2);
             header('Location: yourPosts.php');
             mysqli_close($conn);
